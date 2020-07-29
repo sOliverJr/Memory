@@ -1,0 +1,274 @@
+#erfolg {
+    background-color: #000;
+    color: white;
+    width: 200px;
+    height: 50px;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+}
+
+.keinErfolg {
+    display: none;
+}
+
+.Erfolg {
+    display: block;
+}
+
+#img0 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#img1, #img2, #img3, #img4, #img5, #img6, #img7, #img8, #img9, #img10, #img11, #img12, #img13, #img14, #img15, #img16 {
+    position: relative;
+    width: 75%;
+    height: 75%;
+    top: 12.5%;
+}
+
+body{
+    background: #3C5377;
+    }
+
+/* THE MAINCONTAINER HOLDS EVERYTHING */
+#D1{
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: none;
+  top: 20%;
+  left: 44%;
+  transform: translate(-50%, -50%);
+}
+
+#D2{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: none;
+    top: 20%;
+    left: 58%;
+    transform: translate(-50%, -50%);
+}
+
+#D3{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: none;
+    top: 20%;
+    left: 72%;
+    transform: translate(-50%, -50%);
+}
+
+#D4{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: none;
+    top: 20%;
+    left: 86%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+#D5{
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: none;
+  top: 40%;
+  left: 44%;
+  transform: translate(-50%, -50%);
+}
+
+#D6{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: none;
+    top: 40%;
+    left: 58%;
+    transform: translate(-50%, -50%);
+}
+
+#D7{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: none;
+    top: 40%;
+    left: 72%;
+    transform: translate(-50%, -50%);
+}
+
+#D8{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: none;
+    top: 40%;
+    left: 86%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+#D9{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: none;
+    top: 60%;
+    left: 44%;
+    transform: translate(-50%, -50%);
+}
+
+#D10{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: none;
+    top: 60%;
+    left: 58%;
+    transform: translate(-50%, -50%);
+}
+
+#D11{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: none;
+    top: 60%;
+    left: 72%;
+    transform: translate(-50%, -50%);
+}
+
+#D12{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: none;
+    top: 60%;
+    left: 86%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+#D13{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: none;
+    top: 80%;
+    left: 44%;
+    transform: translate(-50%, -50%);
+}
+
+#D14{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: none;
+    top: 80%;
+    left: 58%;
+    transform: translate(-50%, -50%);
+}
+
+#D15{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: none;
+    top: 80%;
+    left: 72%;
+    transform: translate(-50%, -50%);
+}
+
+#D16{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: none;
+    top: 80%;
+    left: 86%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* The flipping animation */
+/* THE CARD HOLDS THE FRONT AND BACK FACES */
+.Card1{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transform-style: preserve-3d;
+  transition: all 0.8s ease;
+}
+
+.Card2{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease;
+  }
+
+/* THE PSUEDO CLASS CONTROLS THE FLIP */
+.Card2{
+  transform: rotateY(180deg);
+}
+
+/* THE FRONT FACE OF THE CARD, WHICH SHOWS BY DEFAULT */
+ .seite1{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  overflow: hidden;
+  background: white;
+  color: #000;
+}
+
+/* THE BACK FACE OF THE CARD */
+.seite2{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  overflow: hidden;
+  background: #F7F8FA;
+  color: #333;
+  text-align: center;
+  transform: rotateY(180deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
