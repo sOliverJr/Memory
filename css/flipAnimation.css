@@ -1,15 +1,15 @@
 body { font-family: sans-serif; }
 
 .scene {
-  width: 200px;
-  height: 260px;
-  margin: 40px 0;
-  perspective: 600px;
+  width: 150px;
+  height: 150px;
+  margin: 0px 0;
+  float: left;
 }
 
 .images {
-    width: 110px;
-    height: 110px;
+    width: 100%;
+    height: 100%;
 }
 
 .card {
@@ -43,6 +43,6 @@ body { font-family: sans-serif; }
 }
 
 .card__face--back {
-  background: blue;
+  background: green;
   transform: rotateY(180deg);
 }

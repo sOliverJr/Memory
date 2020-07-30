@@ -8,11 +8,11 @@
 
 var side;
 
-function flipCard() {
-    side = document.getElementById("tt").className;
+function flipCard(cardNumber) {
+    side = document.getElementById("tt" + cardNumber).className;
     if  (side == "card") {
-        document.getElementById("tt").className = "card is-flipped";
+        document.getElementById("tt" + cardNumber).className = "card is-flipped";
     } else {
-        document.getElementById("tt").className = "card";
+        document.getElementById("tt" + cardNumber).className = "card";
     }
 }

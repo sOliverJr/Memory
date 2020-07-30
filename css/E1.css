@@ -1,4 +1,4 @@
-    /* Hide the success panel */
+/* Hide the success panel */
 .keinErfolg {display: none;}
 .Erfolg {display: block;}
 
@@ -77,13 +77,13 @@ body{background: #3C5377;}
 
 /* THE MAINCONTAINERS HOLDS EVERYTHING */
 #D1{
-  position: absolute;
-  width: 150px;
-  height: 150px;
-  background: none;
-  top: 20%;
-  left: 44%;
-  transform: translate(-50%, -50%);
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: none;
+    top: 20%;
+    left: 44%;
+    transform: translate(-50%, -50%);
 }
 
 #D2{
@@ -119,13 +119,13 @@ body{background: #3C5377;}
 
 
 #D5{
-  position: absolute;
-  width: 150px;
-  height: 150px;
-  background: none;
-  top: 40%;
-  left: 44%;
-  transform: translate(-50%, -50%);
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: none;
+    top: 40%;
+    left: 44%;
+    transform: translate(-50%, -50%);
 }
 
 #D6{
@@ -245,18 +245,7 @@ body{background: #3C5377;}
 
 /* The flipping animation */
 /* THE CARD HOLDS THE FRONT AND BACK FACES */
-.Card1{
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  transform-style: preserve-3d;
-  transition: all 0.8s ease;
-}
-
-.Card2{
+.Card1, .Card2{
     position: relative;
     top: 0;
     left: 0;
@@ -265,41 +254,41 @@ body{background: #3C5377;}
     border-radius: 10px;
     transform-style: preserve-3d;
     transition: all 0.8s ease;
-  }
+}
 
 /* THE PSUEDO CLASS CONTROLS THE FLIP */
 .Card2{
-  transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
 
 /* THE FRONT FACE OF THE CARD, WHICH SHOWS BY DEFAULT */
- .seite1{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  backface-visibility: hidden;
-  overflow: hidden;
-  background: white;
-  color: #000;
+    .seite1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    overflow: hidden;
+    background: white;
+    color: #000;
 }
 
 /* THE BACK FACE OF THE CARD */
 .seite2{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  backface-visibility: hidden;
-  overflow: hidden;
-  background: #F7F8FA;
-  color: #333;
-  text-align: center;
-  transform: rotateY(180deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    overflow: hidden;
+    background: #F7F8FA;
+    color: #333;
+    text-align: center;
+    transform: rotateY(180deg);
 }
 
 /* Erfolg Bildschirm */
@@ -369,12 +358,34 @@ body{background: #3C5377;}
     color: white;
     vertical-align: center;
 }
-
-
-
-
-
-
-
-
-
+    
+.card {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .card.is-flipped {
+    transform: rotateY(180deg);
+  }
+  
+  .card__face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 260px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .card__face--back {
+    background: green;
+    transform: rotateY(180deg);
+  }

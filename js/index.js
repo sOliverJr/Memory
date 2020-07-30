@@ -38,6 +38,24 @@ function start(){
     } else if (diff == "null" && player != "null"){
         alert("Please select the Difficulty");
     } else if (diff != "null" && player != "null"){
-        alert("Sucess")
+        if (diff == "Easy" && player == "1 Player"){
+            window.location.href = "http://www.oliverseider.com/E1";
+        }else if (diff == "Easy" && player == "2 Players"){
+            alert("E2");
+        }else if (diff == "Easy" && player == "3 Players"){
+            alert("E3");
+        }else if (diff == "Normal" && player == "1 Player"){
+            alert("M1");
+        }else if (diff == "Normal" && player == "2 Players"){
+            alert("M2");
+        }else if (diff == "Normal" && player == "3 Players"){
+            alert("M3");
+        }else if (diff == "Hard" && player == "1 Player"){
+            alert("H1");
+        }else if (diff == "Hard" && player == "2 Players"){
+            alert("H2");
+        }else {
+            alert("H3");
+        }
     }
 }
