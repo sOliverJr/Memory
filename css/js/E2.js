@@ -5,6 +5,8 @@ var erstesBildPosition;
 var zweitesBildPosition;
 var zugNummer = 1;
 var gefundenePaare = 0;
+var gefundenePaareP1 = 0;
+var gefundenePaareP2 = 0;
 var aktuelleLage;
 var randomIndex;
 var temporaryValue;
@@ -12,6 +14,7 @@ var i = 1;
 var anzahlZüge = 0;
 var side;
 var gameStarted = 0;
+var playerTurn = 0;
 
 function backIndex(){
     window.location.href = "http://www.oliverseider.com";
@@ -80,7 +83,6 @@ function spielChangeSide(cardNumber){
                 zugNummer = 2;
             }else {
                 anzahlZüge = anzahlZüge + 1;
-                document.getElementById("MCp2").innerHTML = anzahlZüge;
                 zweitesBild = document.getElementById("img" + cardNumber);
                 zweitesBildPosition = cardNumber;
                 zugNummer = 3;
@@ -100,6 +102,13 @@ function spielChangeSide(cardNumber){
                     // Adds one to the count of found cards and displays it.
                 gefundenePaare = gefundenePaare + 1;
                 document.getElementById("Gp2").innerHTML = gefundenePaare + "/8";
+                if (playerTurn == 1){
+                    gefundenePaareP1 = gefundenePaareP1 + 1;
+                    document.getElementById("P1G").innerHTML = gefundenePaareP1;
+                }else if(playerTurn == 2){
+                    gefundenePaareP2 = gefundenePaareP2 + 1;
+                    document.getElementById("P2G").innerHTML = gefundenePaareP2;
+                }else {}
                 if(gefundenePaare == 8){
                         // If all pairs are found display victory message.
                     document.getElementById("erfolg").className = "Erfolg";
@@ -108,6 +117,7 @@ function spielChangeSide(cardNumber){
                 // If not the same card, they are bioth flipped again.
                 document.getElementById("tt" + erstesBildPosition).className = "card";
                 document.getElementById("tt" + zweitesBildPosition).className = "card";
+                changePlayerTurn()
                 }
                 // Reset the move count to the insitial state.
             zugNummer = 1;
@@ -120,6 +130,7 @@ function spielChangeSide(cardNumber){
     // Starts the game when clicked.
 function start(){
     gameStarted = 1;
+    playerTurn = 1;
     
         // Change the button from "Start" to "Cancel".
     document.getElementById("S/S").className = "ButtonC"
@@ -140,8 +151,21 @@ function start(){
             flipCard(i3);
             i3 = i3+1;
         }
+        document.getElementById("P1").className = "P1TextT";
     }
     erstesBild = "";
     zweitesBild = "";
     zugNummer = 1;
+}
+
+function changePlayerTurn() {
+    if(playerTurn == 1){
+        document.getElementById("P1").className = "P1Text";
+        document.getElementById("P2").className = "P2TextT";
+        playerTurn = 2;
+    } else if(playerTurn == 2){
+        document.getElementById("P1").className = "P1TextT";
+        document.getElementById("P2").className = "P2Text";
+        playerTurn = 1;
+    }
 }

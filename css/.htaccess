@@ -1,0 +1,12 @@
+
+# mod_rewrite start here.
+RewriteEngine on
+
+# does not apply to existing directories - if folder with same name it doesn´t run the rule.
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# check for a file in directory with .html extension.
+RewriteCond %{REQUEST_FILENAME}\.html -f
+
+# shows page that has the actual .html extension.
+RewriteRule ^(.*)$ $1.html [NC,L]

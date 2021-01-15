@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<head>
+    <title>Memory Online</title>
+    <script type="text/javascript" src="js/E1C.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/E1C.css"> 
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+</head>
+<body>
+
+
+    <div class="Timer">
+        <div class="TText">
+            <span class="Tp1">Zeit: </span>
+        </div>
+        <div class="TZeit">
+            <span id="Tp2" class="Tp2">3m 41s</span>
+        </div>
+    </div>
+
+    <div class="MoveCount">
+        <div class="MCText">
+            <span class="MCp1">Züge: </span>
+        </div>
+        <div class="MCZugNummer">
+            <span id="MCp2" class="MCp2">0</span>
+        </div>
+    </div>
+
+    <div class="Gefunden">
+        <div class="GText">
+            <span class="Gp1">Gefunden: </span>
+        </div>
+        <div class="GZahl">
+            <span id="Gp2" class="Gp2">0/8</span>
+        </div>
+    </div>
+
+    <div id="S/S" class="ButtonS">
+        <div class="BStart" onclick="start()">
+            <span>Start</span>
+        </div>
+        <div class="BCancel" onclick="backIndex()">
+                <span>Abbrechen</span>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Alle Karten -->
+    <div id="D1" class="scene S1" onclick="spielChangeSide(1)">
+        <div id="tt1" class="card">
+            <div class="card__face card__face--front seite1"><img class="images" id="img0" src="CImages/0.jpg" alt="Sorry irgendwas geht hier gerade nicht..."></div>
+            <div class="card__face card__face--back seite2"><img class="images" id="img1" src="CImages/1.jpeg" alt="Sorry irgendwas geht hier gerade nicht..."></div>
+        </div>
+     </div>
+
+     <div id="D2" class="scene S1" onclick="spielChangeSide(2)">
+        <div id="tt2" class="card">
+            <div class="card__face card__face--front seite1"><img class="images" id="img0" src="CImages/0.jpg" alt="Sorry irgendwas geht hier gerade nicht..."></div>
+            <div class="card__face card__face--back seite2"><img class="images" id="img2" src="CImages/2.jpeg" alt="Sorry irgendwas geht hier gerade nicht..."></div>
+        </div>
+     </div>
+         
+     <div id="D3" class="scene S1" onclick="spielChangeSide(3)">
+        <div id="tt3" class="card">
+            <div class="card__face card__face--front seite1"><img class="images" id="img0" src="CImages/0.jpg" alt="Sorry irgendwas geht hier gerade nicht..."></div>
+            <div class="card__face card__face--back seite2"><img class="images" id="img3" src="CImages/3.jpeg" alt="Sorry irgendwas geht hier gerade nicht..."></div>
+        </div>
+     </div>
+         
+     <div id="D4" class="scene S1" onclick="spielChangeSide(4)">
+        <div id="tt4" class="card">
+            <div class="card__face card__face--front seite1"><img class="images" id="img0" src="CImages/0.jpg" alt="Sorry irgendwas geht hier gerade nicht..."></div>
+            <div class="card__face card__face--back seite2"><img class="images" id="img4" src="CImages/4.jpeg" alt="Sorry irgendwas geht hier gerade nicht..."></div>
+        </div>
+     </div>
+         
+     <div id="D5" class="scene S1" onclick="spielChangeSide(5)">
+        <div id="tt5" class="card">
+            <div class="card__face card__face--front seite1"><img class="images" id="img0" src="CImages/0.jpg" alt="Sorry irgendwas geht hier gerade nicht..."></div>
+            <div class="card__face card__face--back seite2"><img class="images" id="img5" src="CImages/5.jpeg" alt="Sorry irgendwas geht hier gerade nicht..."></div>
+        </div>
+     </div>
+         
+     <div id="D6" class="scene S1" onclick="spielChangeSide(6)">
+        <div id="tt6" class="card">
+            <div class="card__face card__face--front seite1"><img class="images" id="img0" src="CImages/0.jpg" alt="Sorry irgendwas geht hier gerade nicht..."></div>
+            <div class="card__face card__face--back seite2"><img class="images" id="img6" src="CImages/6.jpeg" alt="Sorry irgendwas geht hier gerade nicht..."></div>
+        </div>
+     </div>
+         
+     <div id="D7" class="scene S1" onclick="spielChangeSide(7)">
+        <div id="tt7" class="card">
+            <div class="card__face card__face--front seite1"><img class="images" id="img0" src="CImages/0.jpg" alt="Sorry irgendwas geht hier gerade nicht..."></div>
+            <div class="card__face card__face--back seite2"><img class="images" id="img7" src="CImages/7.jpeg" alt="Sorry irgendwas geht hier gerade nicht..."></div>
+        </div>
+     </div>
+         
+     <div id="D8" class="scene S1" onclick="spielChangeSide(8)">
+        <div id="tt8" class="card">
+            <div class="card__face card__face--front seite1"><img class="images" id="img0" src="CImages/0.jpg" alt="Sorry irgendwas geht hier gerade nicht..."></div>
+            <div class="card__face card__face--back seite2"><img class="images" id="img8" src="CImages/8.jpeg" alt="Sorry irgendwas geht hier gerade nicht..."></div>
+        </div>
+     </div>
+         
+     <div id="D9" class="scene S1" onclick="spielChangeSide(9)">
+        <div id="tt9" class="card">
+            <div class="card__face card__face--front seite1"><img class="images" id="img0" src="CImages/0.jpg" alt="Sorry irgendwas geht hier gerade nicht..."></div>
+            <div class="card__face card__face--back seite2"><img class="images" id="img9" src="CImages/9.jpeg" alt="Sorry irgendwas geht hier gerade nicht..."></div>
+        </div>
+     </div>
+         
+     <div id="D10" class="scene S1" onclick="spielChangeSide(10)">
+        <div id="tt10" class="card">
+            <div class="card__face card__face--front seite1"><img class="images" id="img0" src="CImages/0.jpg" alt="Sorry irgendwas geht hier gerade nicht..."></div>
+            <div class="card__face card__face--back seite2"><img class="images" id="img10" src="CImages/10.jpeg" alt="Sorry irgendwas geht hier gerade nicht..."></div>
+        </div>
+     </div>
+         
+     <div id="D11" class="scene S1" onclick="spielChangeSide(11)">
+        <div id="tt11" class="card">
+            <div class="card__face card__face--front seite1"><img class="images" id="img0" src="CImages/0.jpg" alt="Sorry irgendwas geht hier gerade nicht..."></div>
+            <div class="card__face card__face--back seite2"><img class="images" id="img11" src="CImages/11.jpeg" alt="Sorry irgendwas geht hier gerade nicht..."></div>
+        </div>
+     </div>
+         
+     <div id="D12" class="scene S1" onclick="spielChangeSide(12)">
+        <div id="tt12" class="card">
+            <div class="card__face card__face--front seite1"><img class="images" id="img0" src="CImages/0.jpg" alt="Sorry irgendwas geht hier gerade nicht..."></div>
+            <div class="card__face card__face--back seite2"><img class="images" id="img12" src="CImages/12.jpeg" alt="Sorry irgendwas geht hier gerade nicht..."></div>
+        </div>
+     </div>
+         
+     <div id="D13" class="scene S1" onclick="spielChangeSide(13)">
+        <div id="tt13" class="card">
+            <div class="card__face card__face--front seite1"><img class="images" id="img0" src="CImages/0.jpg" alt="Sorry irgendwas geht hier gerade nicht..."></div>
+            <div class="card__face card__face--back seite2"><img class="images" id="img13" src="CImages/13.jpeg" alt="Sorry irgendwas geht hier gerade nicht..."></div>
+        </div>
+     </div>
+         
+     <div id="D14" class="scene S1" onclick="spielChangeSide(14)">
+        <div id="tt14" class="card">
+            <div class="card__face card__face--front seite1"><img class="images" id="img0" src="CImages/0.jpg" alt="Sorry irgendwas geht hier gerade nicht..."></div>
+            <div class="card__face card__face--back seite2"><img class="images" id="img14" src="CImages/14.jpeg" alt="Sorry irgendwas geht hier gerade nicht..."></div>
+        </div>
+     </div>
+         
+     <div id="D15" class="scene S1" onclick="spielChangeSide(15)">
+        <div id="tt15" class="card">
+            <div class="card__face card__face--front seite1"><img class="images" id="img0" src="CImages/0.jpg" alt="Sorry irgendwas geht hier gerade nicht..."></div>
+            <div class="card__face card__face--back seite2"><img class="images" id="img15" src="CImages/15.jpeg" alt="Sorry irgendwas geht hier gerade nicht..."></div>
+        </div>
+     </div>
+         
+     <div id="D16" class="scene S1" onclick="spielChangeSide(16)">
+        <div id="tt16" class="card">
+            <div class="card__face card__face--front seite1"><img class="images" id="img0" src="CImages/0.jpg" alt="Sorry irgendwas geht hier gerade nicht..."></div>
+            <div class="card__face card__face--back seite2"><img class="images" id="img16" src="CImages/16.jpeg" alt="Sorry irgendwas geht hier gerade nicht..."></div>
+        </div>
+     </div>
+         
+    
+
+    
+    <div id="erfolg" class="keinErfolg">
+        <div id="top">
+            <div id="text">
+                <img id="sucess" src="Images/success.png" alt="Hurrah!" width="120px" height="120px">
+                <p id="super">Hervorragend!</p>
+                <p id="nextLevel">Versuche es das nächste Mal vielleicht auf Medium.</p>
+            </div>
+        </div>
+        <div id="bottom">
+            <a href="CathiBetaZugang">
+                <div id="button">
+                    <p id="backToIndex">Startbildschirm</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    
+
+</body>

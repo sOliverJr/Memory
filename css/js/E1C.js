@@ -47,7 +47,7 @@ function assignImgageToDiv(){
 
     // Functon needed for the one before.
 function assignImage(numPlace){
-    document.getElementById("img" + numPlace).src = 'Images/' + arr[numPlace - 1] + '.jpeg';
+    document.getElementById("img" + numPlace).src = 'CImages/' + arr[numPlace - 1] + '.jpeg';
 }
 
 

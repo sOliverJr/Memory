@@ -25,7 +25,7 @@
 body{background: #3C5377;}
 
     /* Basic styling of the elements */
-.Timer, .MoveCount, .Gefunden, .ButtonS, .ButtonC {
+.Timer, .Gefunden, .ButtonS, .ButtonC, .Player1, .Player2 {
     color: #F7F8FA;
     position: absolute;
     height: 75px;
@@ -36,10 +36,15 @@ body{background: #3C5377;}
     left: 15%;
 }
 
+.P1TextT, .P2TextT {
+    color: #27ae60;
+}
+
     /* Top left Game stats */
 .Timer {top: 15%;}
-.MoveCount {top: 25%;}
-.Gefunden{top: 35%;}
+.Gefunden{top: 50%;}
+.Player1, .Player1T{top:20%}
+.Player2, .Player2T{top: 35%;}
 
     /* Start Button */
 .ButtonS {
@@ -584,12 +589,12 @@ body{background: #3C5377;}
     font-size: 3em;
 }
 
-.Timer, .MoveCount, .Gefunden{font-size: 3em;}
+.Player1, .Player2, .Gefunden, .Player1T, .Player2T{font-size: 3em;}
 
     /* Top left Game stats */
-.Timer {top: 7%; left: 50%;}
-.MoveCount {top: 16%; left: 25%;}
-.Gefunden{top: 24%; left: 25%;}
+.Gefunden {top: 10%; left: 50%;}
+.Player1 {top: 22%; left: 25%;}
+.Player2{top: 22%; left: 75%;}
 
 .TText, .TZeit, .GText, .GZahl, .MCText, .MCZahl {
     display: block;
