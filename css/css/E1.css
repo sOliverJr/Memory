@@ -1,0 +1,602 @@
+/* Hide the success panel */
+.keinErfolg {display: none;}
+.Erfolg {display: block;}
+
+    /* Backface of the Cards */
+#img0 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+    /* Frontface of the cards */
+#img1, #img2, #img3, #img4, #img5, #img6, #img7, #img8, #img9, #img10, #img11, #img12, #img13, #img14, #img15, #img16 {
+    position: relative;
+    width: 90%;
+    height: 90%;
+    top: 50%;
+    transform: translate(-0%, -50%);
+}
+
+    /* Background color */
+body{background: #3C5377;}
+
+    /* Basic styling of the elements */
+.Timer, .MoveCount, .Gefunden, .ButtonS, .ButtonC {
+    color: #F7F8FA;
+    position: absolute;
+    height: 75px;
+    width: 300px;
+    font-size: 2em;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    left: 15%;
+}
+
+    /* Top left Game stats */
+.Timer {top: 15%;}
+.MoveCount {top: 25%;}
+.Gefunden{top: 35%;}
+
+    /* Start Button */
+.ButtonS {
+    top: 80%; 
+    height: 50px;
+    width: 125px;
+    border-radius: 20px;
+    background-color: #0F62C7;
+}
+
+    /* Cancel Button */
+.ButtonC{
+    top: 80%; 
+    height: 50px;
+    width: 200px;
+    border-radius: 20px;
+    background-color: #D23737;
+}
+
+    /* Styling of the Text in the Buttons */
+.ButtonS span{
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.ButtonC span{
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+    /* JS will change the class name an here it will change the displayed button */
+.BStart, .BCancel {display: none;}
+.ButtonS .BStart {display: block;}
+.ButtonC .BCancel {display: block;}
+
+
+
+
+/* THE MAINCONTAINERS HOLDS EVERYTHING */
+#D1{
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    background: none;
+    top: 20%;
+    left: 44%;
+    transform: translate(-50%, -50%);
+}
+
+#D2{
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    background: none;
+    top: 20%;
+    left: 58%;
+    transform: translate(-50%, -50%);
+}
+
+#D3{
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    background: none;
+    top: 20%;
+    left: 72%;
+    transform: translate(-50%, -50%);
+}
+
+#D4{
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    background: none;
+    top: 20%;
+    left: 86%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+#D5{
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    background: none;
+    top: 40%;
+    left: 44%;
+    transform: translate(-50%, -50%);
+}
+
+#D6{
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    background: none;
+    top: 40%;
+    left: 58%;
+    transform: translate(-50%, -50%);
+}
+
+#D7{
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    background: none;
+    top: 40%;
+    left: 72%;
+    transform: translate(-50%, -50%);
+}
+
+#D8{
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    background: none;
+    top: 40%;
+    left: 86%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+#D9{
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    background: none;
+    top: 60%;
+    left: 44%;
+    transform: translate(-50%, -50%);
+}
+
+#D10{
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    background: none;
+    top: 60%;
+    left: 58%;
+    transform: translate(-50%, -50%);
+}
+
+#D11{
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    background: none;
+    top: 60%;
+    left: 72%;
+    transform: translate(-50%, -50%);
+}
+
+#D12{
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    background: none;
+    top: 60%;
+    left: 86%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+#D13{
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    background: none;
+    top: 80%;
+    left: 44%;
+    transform: translate(-50%, -50%);
+}
+
+#D14{
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    background: none;
+    top: 80%;
+    left: 58%;
+    transform: translate(-50%, -50%);
+}
+
+#D15{
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    background: none;
+    top: 80%;
+    left: 72%;
+    transform: translate(-50%, -50%);
+}
+
+#D16{
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    background: none;
+    top: 80%;
+    left: 86%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* The flipping animation */
+/* THE CARD HOLDS THE FRONT AND BACK FACES */
+.Card1, .Card2{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease;
+}
+
+/* THE PSUEDO CLASS CONTROLS THE FLIP */
+.Card2{
+    transform: rotateY(180deg);
+}
+
+/* THE FRONT FACE OF THE CARD, WHICH SHOWS BY DEFAULT */
+.seite1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    overflow: hidden;
+    background: white;
+    color: #000;
+}
+
+/* THE BACK FACE OF THE CARD */
+.seite2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    overflow: hidden;
+    background: #F7F8FA;
+    color: #333;
+    text-align: center;
+    transform: rotateY(180deg);
+}
+
+/* Erfolg Bildschirm */
+
+#erfolg {
+    position: absolute;
+    background-color: yellow;
+    opacity: 100%;
+    width: 700px;
+    height: 400px;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+#top {
+    position: absolute;
+    background-color: #F6F6F6;
+    opacity: 100%;
+    width: 700px;
+    height: 280px;
+    text-align: center;
+}
+
+#sucess {
+    position: relative;
+    top: 15px;
+}
+
+#super{
+    position: relative;
+    font-size: 3em;
+    color: #384D52;
+    top: -20px;
+}
+
+#nextLevel {
+    position: relative;
+    font-size: 1.25em;
+    color: #384D52;
+    top: -50px;
+}
+
+#bottom {
+    position: absolute;
+    background-color: #7DBAAB;
+    opacity: 100%;
+    width: 700px;
+    height: 120px;
+    bottom: 0px;
+    text-align: center;
+}
+
+#button {
+    position: absolute;
+    background-color: #3F5C62;
+    width: 200px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+#backToIndex{
+    color: white;
+    vertical-align: center;
+}
+    
+.card {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .card.is-flipped {
+    transform: rotateY(180deg);
+  }
+  
+  .card__face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* line-height: 260px;  */
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .card__face--back {
+    transform: rotateY(180deg);
+  }
+
+
+@media screen and (max-width: 1000px) {
+
+    /* THE MAINCONTAINERS HOLDS EVERYTHING */
+#D1{
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    background: none;
+    top: 39%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
+
+#D2{
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    background: none;
+    top: 39%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+
+#D3{
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    background: none;
+    top: 39%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+}
+
+#D4{
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    background: none;
+    top: 39%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+#D5{
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    background: none;
+    top: 53%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
+
+#D6{
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    background: none;
+    top: 53%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+
+#D7{
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    background: none;
+    top: 53%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+}
+
+#D8{
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    background: none;
+    top: 53%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+#D9{
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    background: none;
+    top: 67%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
+
+#D10{
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    background: none;
+    top: 67%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+
+#D11{
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    background: none;
+    top: 67%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+}
+
+#D12{
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    background: none;
+    top: 67%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+#D13{
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    background: none;
+    top: 81%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
+
+#D14{
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    background: none;
+    top: 81%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+
+#D15{
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    background: none;
+    top: 81%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+}
+
+#D16{
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    background: none;
+    top: 81%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+}
+
+.ButtonS {
+    top: 93%; 
+    height: 100px;
+    width: 300px;
+    border-radius: 20px;
+    background-color: #0F62C7;
+    left: 50%;
+    font-size: 3em;
+}
+
+    /* Cancel Button */
+.ButtonC{
+    top: 93%; 
+    height: 100px;
+    width: 400px;
+    border-radius: 20px;
+    background-color: #D23737;
+    left: 50%;
+    font-size: 3em;
+}
+
+.Timer, .MoveCount, .Gefunden{font-size: 3em;}
+
+    /* Top left Game stats */
+.Timer {top: 7%; left: 50%;}
+.MoveCount {top: 16%; left: 25%;}
+.Gefunden{top: 24%; left: 25%;}
+
+.TText, .TZeit, .GText, .GZahl, .MCText, .MCZahl {
+    display: block;
+}
+
+}
+
+    /* @media screen and (min-height: 800px) {
+        body{ display: none;}
+    } */

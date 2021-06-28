@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+    <title>Memory Online</title>
+    <script type="text/javascript" src="js/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/index.css"> 
+    <meta name="viewport" content="width=device-width, initial-scale=0.75">
+</head>
+<body>
+    <div class="working">
+
+        <div>
+            <p class="title">Memory Online</p>
+        </div>
+
+        <div class="align">
+            <div class="difficulty">
+                <p>Difficulty:</p>
+                <div class="select">
+                    <select name="format" class="format" id="Diff" onchange="detectDiff()">
+                        <option selected disabled>Choose your difficulty </option>
+                        <option value="easy">Easy</option>
+                        <option value="normal">Normal</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="players">
+                <p>Players:</p>
+                <div class="select">
+                    <select name="format" class="format" id="Play" onchange="detectPlayers()">
+                        <option selected disabled>Choose N° of Players</option>
+                        <option value="1p">1 Player</option>
+                        <option value="2p">2 Players</option>
+                        <option value="3p">3 Players</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div id="positionButton">
+            <div id="button" onclick="start()">
+                <p id="start">Start</p>
+            </div>
+        </div>
+        <a href="E1C">
+            <p id="copyright">© Oliver Seider Jr</p>
+        </a>
+    </div>
+
+    <div class="error">
+            <p class="error">Please check your Browser and try again.</p>
+    </div>
+</body>
